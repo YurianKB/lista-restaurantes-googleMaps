@@ -1,8 +1,15 @@
-.map {
-	height: 700px;
-	width: 400px;
+.navbar{
+	background-color: #000000;
+	color: #FFFFFF;
+	font-family: "Century Gothic"
+	: center;
 }
 
-h1{
-	text-align: center;
+.map {
+	height: 500px;
+	width: 500px;
+}
+
+.listaRestaurantes{
+	padding-top: 20px;
 }
