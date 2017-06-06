@@ -6,10 +6,13 @@
 }
 
 .map {
-	height: 500px;
-	width: 500px;
+	height: 400px;
 }
 
 .listaRestaurantes{
 	padding-top: 20px;
+}
+
+.restaurante {
+	cursor: pointer;
 }

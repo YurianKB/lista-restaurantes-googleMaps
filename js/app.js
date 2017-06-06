@@ -1,27 +1,10 @@
-var listaRestaurantes = [{
-    "nombre": "Restaurante1",
-  },
-  {
-    "nombre": "Restaurante2",
-  },
-  {
-    "nombre": "Restaurante3",
-  },
-];
-
-
-
-
-
-
-
-
-
 var cargarPagina = function() {
+  //obtenerUbicacion();
+  //crearElementos(restaurantes);
+  //$("#formularioBusqueda").click(filtrarRestaurantes);
+  //$('select').material_select();
   obtenerUbicacion();
-  crearElementos(restaurantes);
-  $("#formularioBusqueda").click(filtrarRestaurantes);
-  $('select').material_select();
+  $(".restaurante").click(cambiarUbicacion);
 };
 
 
@@ -54,9 +37,20 @@ var mostrarMapa = function(coordenadas) {
   });
 }
 
+function cambiarUbicacion() {
+  var latitud = $(this).data("latitud");
+  var longitud = $(this).data("longitud");
 
+  var coordenadas = {
+    lat: latitud,
+    lng: longitud
+  };
 
-var restaurantes = [{
+  console.log(coordenadas);
+  mostrarMapa(coordenadas);
+}
+
+/*var restaurantes = [{
   "nombre": "Restaurante La Roma",
   "tipoDeComida": "ComidaCorrida",
   "direccion": "Mérida 243, C. U. Benito Juárez, 06700 Ciudad de México, CDMX",
@@ -82,7 +76,7 @@ var restaurantes = [{
     "lng": '-99.167457'
   }
 
-}];
+}];*/
 
 var crearElementos = function(restaurantes) {
   var plantillaFinal = "";
