@@ -92,7 +92,7 @@ var crearElementos = function(restaurantes) {
 var filtrarRestaurantes = function(e) {
   e.preventDefault();
   var criterioBusqueda = $("input.select-dropdown").val().toLowerCase();
-  var palabraBusqueda = $("#foodFinder").val().toLowerCase();
+  var palabraBusqueda = $("#buscadorComida").val().toLowerCase();
   var restaurantesFiltrados = restaurantes.filter(function(restaurante) {
     if (criterioBusqueda === "tipo") {
       return restaurante.tipoDeComida.toLowerCase().indexOf(palabraBusqueda) >= 0;
@@ -104,7 +104,7 @@ var filtrarRestaurantes = function(e) {
       return restaurante.direccion.toLowerCase().indexOf(palabraBusqueda) >= 0;
 
     } else {
-      return "no te encuentras cerca de ese lugar ";
+      return "Elije otro Restaurante ";
     }
   });
   crearElementos(restaurantesFiltrados);

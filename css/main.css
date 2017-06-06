@@ -7,6 +7,7 @@
 
 .map {
 	height: 400px;
+	padding: 0px;
 }
 
 .listaRestaurantes{
@@ -15,4 +16,14 @@
 
 .restaurante {
 	cursor: pointer;
+}
+
+img{
+	height: 140px;
+	width: 200px;
+}
+
+#map {
+
+	padding: 0px;
 }
