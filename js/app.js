@@ -50,21 +50,21 @@ function cambiarUbicacion() {
   mostrarMapa(coordenadas);
 }
 
-/*var restaurantes = [{
+var restaurantes = [{
   "nombre": "Restaurante La Roma",
   "tipoDeComida": "ComidaCorrida",
   "direccion": "Mérida 243, C. U. Benito Juárez, 06700 Ciudad de México, CDMX",
   "coordenadas": {
-    "lat": '19.4123409',
-    "lng": '-99.1580969',
+    "lat": '19.4124033',
+    "lng": '-99.1580568',
   }
 }, {
   "nombre": "Helado Obscuro",
   "tipoDeComida": "Helado",
   "direccion": "Orizaba 203, Roma Nte., 06700 Ciudad de México, CDMX",
   "coordenadas": {
-    "lat": '19.4141967',
-    "lng": '-99.1679291'
+    "lat": '19.4128247',
+    "lng": '-99.1606755'
   }
 
 }, {
@@ -72,11 +72,11 @@ function cambiarUbicacion() {
   "tipoDeComida": "Pizza",
   "direccion": "Parque España 3, Roma Nte., 06700 Ciudad de México, CDMX",
   "coordenadas": {
-    "lat": '19.4182846',
-    "lng": '-99.167457'
+    "lat": '19.41652',
+    "lng": '99.1718387'
   }
 
-}];*/
+}];
 
 var crearElementos = function(restaurantes) {
   var plantillaFinal = "";
@@ -84,7 +84,6 @@ var crearElementos = function(restaurantes) {
     plantillaFinal += plantillaRestaurante.replace("__nombre__", restaurante.nombre)
       .replace("__direccion__", restaurante.direccion)
       .replace("__TipoComida__", restaurante.tipoDeComida)
-      .replace("__telefono__", restaurante.telefono)
 
   });
   $(".listadoDeComidas").html(plantillaFinal);
@@ -104,7 +103,7 @@ var filtrarRestaurantes = function(e) {
       return restaurante.direccion.toLowerCase().indexOf(palabraBusqueda) >= 0;
 
     } else {
-      return "Elije otro Restaurante ";
+      return "Elije otro Restaurante";
     }
   });
   crearElementos(restaurantesFiltrados);

@@ -1,29 +1,23 @@
 .navbar{
 	background-color: #000000;
 	color: #FFFFFF;
-	font-family: "Century Gothic"
-	: center;
+	font-family: "Century Gothic";
 }
 
-.map {
+.map{
 	height: 400px;
 	padding: 0px;
 }
 
-.listaRestaurantes{
+.buscadorComida{
 	padding-top: 20px;
 }
 
-.restaurante {
+.restaurante{
 	cursor: pointer;
 }
 
 img{
 	height: 140px;
 	width: 200px;
-}
-
-#map {
-
-	padding: 0px;
 }
